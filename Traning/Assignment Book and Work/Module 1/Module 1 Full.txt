@@ -1,0 +1,42 @@
+q1
+waht is software? waht is software engineering?
+>>>
+Software is instruction that are written in programming language, that manipulate with the computer to get desire result. Software engineering involve planning, designing, counstrectuing and maintaining software application.
+
+q2
+Explain types of software.
+>>> 
+There are 5 types of software, application software, system software, driver software, middleware, programming software.
+Application software, that are design to perfom specific function to user. Example, Web Browser.
+System software cordinates the activities and functions of heardware and software. Example, OS.
+Driver softwares are desing for enabling to perform their specific task of devises that are attached with the computer. Example, Keyboard.
+Middleware software, as term describes it mediate between two application software or system software and application software.Example, Windows to exel and word.
+Programming software, Computer programer use programing software to write a code. It enable programer to develop,write,test and debug code. Example, Compliers,Debuggers,Interpreters.
+
+q3
+What is SDLC, explain each phase of SDLC?
+>>>
+SDLC is high quality system approch for designing information system development projects.
+Phases:
+1. Planing, Defining the business needs.
+2. Analysis, gethering and analysing requirements of the IS.
+3. Design, desingning the arechcitech, database, user interface, and othe componends.
+4. Development, Involves coding, testing, and debugging.
+5. Testing, involes testing the information system to see if it meets the requirements. 
+6. Deploy, involves deploying the information system to production and training.
+7. Maintence, involves maintaining the information system after the deployment.
+
+q4
+What is DFD?
+>>>
+DFD stands for data flow diagram, that is graphical representation to undesrtand that how data flow within a system.
+
+q5
+what is flow chart?
+>>>
+Flow chart is the graphical representation of the of a system algorythm, diagram involved and sequence occure.
+
+q6
+What is usecase diagram?
+>>>
+Use case diagram is graphical diagram that is focused on actor and system interaction for different senarios.

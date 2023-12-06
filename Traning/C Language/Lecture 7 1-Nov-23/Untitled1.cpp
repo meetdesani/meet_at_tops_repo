@@ -29,6 +29,5 @@ main(){
 		e1.pr=e1.total/3;
 	}
 	printf("\tname\tsub1\tsub2\tsub3\ttotal\tper\n");
-	printf("\t%s\t%d\t%d\t%d\t%d\t%.2f",e1.name,e1.sub1,e1.sub2,e1.sub3,e1.total,e1.pr);
-	
+	scanf("\t%s\t%d\t%d\t%d\t%d\t.2f",e1.name,e1.sub1,e1.sub2,e1.sub3,e1.total,e1.pr);
 }
