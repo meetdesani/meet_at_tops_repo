@@ -1,0 +1,121 @@
+Queryes
+3. 
+SELECT First_Name
+FROM Employee
+WHERE "Employee Name" LIKE '%Tom%';
+
+4.
+SELECT FIRST_NAME, "Joining Date", Salary
+FROM Employee;
+
+5.
+SELECT *
+FROM Employee
+ORDER BY First_Name ASC, Salary DESC;
+
+6.
+SELECT *
+FROM Employee
+WHERE First_Name LIKE '%J%';
+
+7.
+SELECT Department, MAX(Salary) AS MaxSalary
+FROM Employee
+GROUP BY Department
+ORDER BY MaxSalary ASC;
+
+8.
+SELECT Department, MAX(Salary) AS MaxSalary
+FROM Employee
+GROUP BY Department
+ORDER BY MaxSalary ASC;
+
+9.
+CREATE TRIGGER after_employee_insert
+AFTER INSERT ON Employee
+FOR EACH ROW
+BEGIN
+    INSERT INTO viewtable (employee_id, first_name, last_name, ...)
+    VALUES (NEW.employee_id, NEW.first_name, NEW.last_name, ...);
+END;
+
+10.
+CREATE TRIGGER after_employee_insert
+AFTER INSERT ON Employee
+FOR EACH ROW
+BEGIN
+    INSERT INTO viewtable (employee_id, first_name, last_name, ...)
+    VALUES (NEW.employee_id, NEW.first_name, NEW.last_name, ...);
+END;
+
+12.
+SELECT *
+FROM SALSESPERSON
+
+SELECT *
+FROM  Customer
+
+13.
+SELECT *
+FROM orders
+WHERE order_amount > 1000;
+
+
+14.
+SELECT salesperson_name, city
+FROM salespeople
+WHERE city = 'London' AND commission > 0.12;
+
+15.
+SELECT salesperson_name, city
+FROM salespeople
+WHERE city = 'London' AND commission > 0.12;
+
+16.
+SELECT *
+FROM salespeople
+WHERE commission > 0.10 AND commission < 0.12;
+
+17.
+SELECT *
+FROM customers
+WHERE rating > 100 OR (rating <= 100 AND city = 'Rome');
+
+18.
+SELECT salesman_id, name, city, commission
+FROM salespeople;
+
+19.
+SELECT ord_no, ord_date, purch_amt
+FROM orders
+WHERE salesman_id = 5001;
+
+
+20.
+SELECT PRO_ID, PRO_NAME, PRO_PRICE, PRO_COM
+FROM item_mast
+WHERE PRO_PRICE BETWEEN 200.00 AND 600.00;
+
+
+21.
+
+SELECT AVG(PRO_PRICE) AS avg_price
+FROM item_mast
+WHERE PRO_COM = 16;
+
+22.
+SELECT PRO_NAME AS 'Item Name', PRO_PRICE AS 'Price in Rs.'
+FROM item_mast;
+
+
+23.
+
+SELECT PRO_NAME, PRO_PRICESELECT PRO_COM AS 'Company Code', AVG(PRO_PRICE) AS 'Average Price'
+FROM item_mast
+GROUP BY PRO_COM;
+FROM item_mast
+WHERE PRO_PRICE >= 250.00
+ORDER BY PRO_PRICE DESC, PRO_NAME ASC;
+
+
+24.

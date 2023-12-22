@@ -1,0 +1,65 @@
+What do you understand by Database?
+
+A database is a structured collection of data that is organized and stored for easy access, management, and retrieval. It can be of various types, including relational databases, NoSQL databases, and more. Databases are essential for storing and managing large volumes of information efficiently.
+What is Normalization?
+
+Normalization is a process in database design that organizes tables and attributes to reduce data redundancy and improve data integrity. The goal is to eliminate data anomalies, such as insertion, update, and deletion errors, by decomposing tables into smaller, related tables and establishing relationships between them.
+What is the Difference between DBMS and RDBMS?
+
+DBMS (Database Management System) is a software application that interacts with the user, applications, and the database itself to capture and analyze data. RDBMS (Relational Database Management System) is a type of DBMS that uses a relational model, defining relationships between tables, enforcing constraints, and supporting SQL queries.
+What is MF Cod Rule of RDBMS Systems?
+
+It seems there might be a typo in your question. If you mean "Codd's Rules," then it refers to the 12 rules proposed by Edgar F. Codd, the pioneer of the relational model. These rules define the requirements that a database management system must meet to be considered a relational database management system (RDBMS).
+What do you understand by Data Redundancy?
+
+Data redundancy occurs when the same piece of data is stored in multiple places in a database. It can lead to inconsistencies and increased storage requirements. Normalization is one technique used to minimize data redundancy in a database.
+What is DDL Interpreter?
+
+DDL (Data Definition Language) Interpreter is a component of a database management system responsible for interpreting and executing DDL commands. DDL commands are used to define, modify, and manage the structure of the database, including creating tables, altering table structures, and defining constraints.
+What is DML Compiler in SQL?
+
+DML (Data Manipulation Language) Compiler is responsible for interpreting and executing DML commands in SQL (Structured Query Language). DML commands are used to manipulate and query data in a database, including operations such as inserting, updating, deleting, and retrieving data.
+What is SQL Key Constraints? Write an Example of SQL Key Constraints.
+
+SQL key constraints define rules for the relationships between tables. Examples include:
+PRIMARY KEY: Ensures unique identification of each record in a table.
+sql
+Copy code
+CREATE TABLE Employees (
+  EmployeeID INT PRIMARY KEY,
+  EmployeeName VARCHAR(50)
+);
+FOREIGN KEY: Links two tables based on a column in one table that refers to the primary key in another.
+sql
+Copy code
+CREATE TABLE Orders (
+  OrderID INT PRIMARY KEY,
+  CustomerID INT,
+  FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+);
+What is Savepoint? How to create a Savepoint? Write a Query.
+
+A savepoint is a point in a transaction to which you can roll back. It allows you to create a point within a transaction to which you can later roll back if needed. Example:
+sql
+Copy code
+SAVEPOINT my_savepoint;
+-- Perform some operations
+ROLLBACK TO my_savepoint; -- Roll back to the savepoint if necessary
+What is a Trigger, and how to create a Trigger in SQL?
+
+A trigger is a set of instructions that are automatically executed, or "triggered," in response to specific events on a particular table or view in a database.
+sql
+Copy code
+CREATE TRIGGER my_trigger
+AFTER INSERT ON Employees
+FOR EACH ROW
+BEGIN
+  -- Trigger logic goes here
+  -- Example: Print a message after each insert
+  SELECT 'New employee added: ' || NEW.EmployeeName;
+END;
+This trigger will execute the specified logic after each insertion into the Employees table.
+
+
+
+
