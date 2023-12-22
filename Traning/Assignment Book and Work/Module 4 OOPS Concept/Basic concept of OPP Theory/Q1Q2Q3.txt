@@ -1,0 +1,22 @@
+Q1
+OPP definatition:
+>>>
+Object oriantad programming is the software programing that organised the software design around the data rather than function and logic.
+
+Q2
+OPP Concept list:
+>>>
+Basic concept of OPP are here below.
+Object
+Classes
+Data Abstration and encapsulation
+Polumorphism
+Inheritance 
+Dynamic Binding
+
+Q3
+OPP and POP Difference:
+>>>
+Object-Oriented Programming (OOP) and Procedural Programming (POP) are two different programming paradigms, each with its own approach to structuring and organizing code.
+Examples of OOP:Java, C++, Python, Ruby, etc.
+Examples of POP:C, Fortran, Pascal, etc.

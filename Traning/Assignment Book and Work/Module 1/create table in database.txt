@@ -1,0 +1,4 @@
+create table table_name(
+	column_name datatype primary key,
+	column_name datatype
+);
