@@ -1,0 +1,12 @@
+Lecture 4: 23 Dec 2023
+
+arrow function
+hoisting
+loops
+break
+lable
+continiue
+for in 
+for or
+object
+function aditional prototypes (methods): apply call and bind

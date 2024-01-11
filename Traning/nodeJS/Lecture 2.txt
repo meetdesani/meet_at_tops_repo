@@ -1,0 +1,18 @@
+Lecture 2: 19 Dec 2023
+
+add event listner
+getelementbyID
+inpuydata from text
+//html never complile, direct exicute
+append,child= nodelist and htmlcollection
+typescript and javascript
+quiryselector all
+defer
+settimeout***
+sincronimus- single thread
+ashink await - js
+scops meaing and exicution
+lexical environment
+exicutaion contex and memory
+if else
+get res()

@@ -1,0 +1,11 @@
+Lecture 3: 21 Dec 2023
+
+setTimeout
+steTIme
+ref:codepen
+if for loops
+patterns in JS
+attribute
+argunment
+declaration
+map and work are recursive function.

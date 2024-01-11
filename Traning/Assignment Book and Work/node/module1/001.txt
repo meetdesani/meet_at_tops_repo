@@ -1,0 +1,93 @@
+Q1>>>
+What is the difference between Java & JavaScript?
+A1>>>
+Java is a versatile, object-oriented, and platform-independent programming language primarily used for building 
+enterprise-level applications, mobile applications (Android), and server-side development. It is compiled and runs
+on the Java Virtual Machine (JVM). On the other hand, JavaScript is a lightweight, interpreted scripting language 
+mainly employed for front-end web development. It enhances the interactivity of web pages by enabling dynamic content 
+and manipulation of the Document Object Model (DOM). Unlike Java, JavaScript is executed in web browsers, making it 
+essential for creating interactive and responsive user interfaces on the client side. While both languages share some 
+syntax similarities, their use cases, execution environments, and intended applications are distinct.
+
+Q2>>>
+What is JavaScript?
+A2>>>
+JavaScript is a versatile, high-level scripting language primarily utilized for front-end web development. It enables 
+the creation of dynamic and interactive user interfaces by manipulating the Document Object Model (DOM) of a web page. 
+As a client-side scripting language, JavaScript runs directly in web browsers, allowing developers to enhance the 
+functionality and responsiveness of websites.
+
+Q3>>>
+What are the data types supported by JavaScript?
+A3>>>
+JavaScript supports several data types that can be categorized into two main groups: primitive data types and objects.
+primitive data types: 
+    numbers 
+    strings 
+    booleans 
+    undefined 
+    and null 
+
+Objects, on the other hand, are complex data types,
+    collections of key-value pairs
+    functions
+
+Q4>>>
+What are the scopes of a variable in JavaScript?
+A4>>>
+In JavaScript, the scope of a variable refers to the region of code where the variable can be accessed or modified. There 
+are two main types of scope in JavaScript: global scope and local scope.
+Other two scope are Block Scope & Function Scope
+
+
+Q5>>>
+What is callback?
+A5>>>
+Callback functions are a crucial concept in asynchronous programming, where tasks may not necessarily be executed in the 
+order in which they appear in the code.
+callback is a function that is passed as an argument to another function, and it is intended to be executed after the 
+completion of a specific task or at a certain point in the future.
+
+Q6>>>
+What is the clouser? Give me an Example.
+A6>>>
+A closure is a feature in JavaScript that allows functions to retain access to variables from the outer (enclosing) 
+scope even after the outer function has finished execution.
+function funOut() {
+    let funOutValue = "THis is Meet";
+  
+    function funIn() {
+      console.log(funOutValue);
+    }
+    // Return the inner function, creating a closure
+    return funIn;
+  }
+  
+  let closure = funOut();
+  console.log(funOut());
+
+Q7>>>
+WHat is the difference between == and === operator?
+A7>>>
+"==" do check the equality of the values but "===" do check the equality and also check the data type of the valeus.
+So "==" called equality operator and "===" called strict equality operator.
+In general, it's considered good practice to use '===' for equality checks because it avoids unexpected type coercion 
+and can help prevent subtle bugs. However, there might be cases where '==' is intentionally used, depending on the specific 
+requirements of your code.
+
+Q8>>>
+What is the difference between null & undefined?
+A8>>>
+Null and undefined are both special values that represent the absence of a meaningful value, but they are used in slightly 
+different contexts. null: It is a value that represents the intentional absence of any object value. undefined: It is a 
+special value that is automatically assigned to a variable that has been declared but has not been assigned any value.
+
+Q9>>>
+What would be the result of 2+5+”3″?
+A9>>>
+79
+
+Q10>>>
+What is the difference between Call & Apply?
+A10>>>
+call take arrguments seprated by comma and apply take arrguments that are in array.
