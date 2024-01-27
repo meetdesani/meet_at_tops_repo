@@ -1,0 +1,29 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#logo{
+    font-weight: 1000;
+    color: darkkhaki;
+}
+
+h1{
+    margin: 10%;
+    text-align: center;
+    background-color: #F4F5F6;
+}
+#center{
+    text-align: center;
+}
+#a-margin{
+    margin: 10px;
+}
+#red{
+    color: red;
+}
+.card{
+    margin: 10px;
+}
+.form-group{
+    margin: 20px;
+}
