@@ -1,0 +1,47 @@
+Question 1
+What is MongoDB?
+
+Answer: 
+A database, MongoDB is a popular open-source NoSQL database management system that is designed to handle large volumes of data in a flexible and scalable manner.Flexible schema model: Documents within a collection do not need to have the same fields, and a field's data type can differ between documents.
+----------
+
+Quesstion 2
+What is difference between mongo DB and SQL?
+
+Answer: 
+Database Type:
+
+MongoDB: MongoDB is a NoSQL database, which means it doesn't rely on a traditional relational database management system (RDBMS) structure. Instead, it uses a flexible, schema-less document model.SQL databases, often referred to as relational databases, follow a structured, tabular format where data is organized into tables with predefined schemas.
+
+MongoDB uses a document-oriented data model. Data is stored in flexible, JSON-like documents, and collections (equivalent to tables in SQL) can contain different types of documents with varying fields.SQL databases use a table-based data model where each table has a predefined schema, and each row in the table represents a record with the same set of fields.
+
+MongoDB is schema-less, meaning each document in a collection can have a different structure. Fields can be added or removed without affecting other documents in the collection.SQL databases have a predefined schema where the structure of the data is specified before data entry. Changes to the schema often require altering the table structure, which can be more rigid.
+
+MongoDB uses a query language that is based on JSON-like documents. Queries are expressed in terms of the structure of the documents.SQL databases use the SQL language for querying, which is a standardized language for relational databases. SQL queries are written in a declarative style.
+----------
+Questio 5
+Write command to show all data from product collections and sort in ascending order
+
+Answer: 
+db.product.find().sort({ fieldName: 1 })
+----------
+Question 6
+Write command to  Update product price for particular product.
+
+Answer: 
+db.product.update({ productName: "YourProduct" }, { $set: { price: newPrice } })
+----------
+Question 7
+Write command to delete particular document and collection.
+
+Delete a particular document:
+db.yourCollection.deleteOne({ _id: ObjectId("yourDocumentId") });
+
+Delete multiple documents:
+db.yourCollection.deleteMany({ your deletion criteria });
+
+Delete an entire collection:
+db.yourCollection.drop();
+
+
+
