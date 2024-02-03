@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Clock App</title>
+</head>
+<body>
+  <h1>World Clock App</h1>
+  <form id="timeForm">
+    <label for="timeZones">Enter time zones (comma-separated):</label>
+    <input type="text" id="timeZones" name="timeZones" required>
+    <button type="button" onclick="getTimes()">Get Times</button>
+  </form>
+  <div id="result"></div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br><div><pre>
+    Examples:
+    America/New_York
+    Europe/London
+    Asia/Tokyo
+    Pacific/Honolulu
+    Australia/Sydney
+  </pre></div>
+
+  <script>
+    function getTimes() {
+      const timeZones = document.getElementById('timeZones').value.split(',');
+      fetch('/getTimes', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams({ timeZones: timeZones }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        const resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = '';
+        for (const [timezone, time] of Object.entries(data)) {
+          const paragraph = document.createElement('p');
+          paragraph.textContent = `${timezone}: ${time}`;
+          resultDiv.appendChild(paragraph);
+        }
+      });
+    }
+  </script>
+</body>
+</html>

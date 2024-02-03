@@ -1,0 +1,8 @@
+Question 1
+What is Express JS?
+
+Answer:
+Express.js (or simply Express) is a back end web application framework for Node.js, released as free and open-source software under the MIT License. It is designed for building web applications and APIs. It has been called the de facto standard server framework for Node.js.Express is a minimal and flexible framework that provides a robust set of features for building web and mobile applications. It is used to build a single page, multipage, and hybrid web application. It's a layer built on the top of the Node.js that helps manage servers and routes.
+
+Node Js is Mandatory to for Express JS framework
+----------
