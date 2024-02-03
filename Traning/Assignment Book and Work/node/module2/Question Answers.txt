@@ -1,0 +1,66 @@
+Question 1
+What is Node.js? Where can you use it?
+
+Answer:
+Node.js is an open-source, cross-platform JavaScript runtime environment that executes JavaScript code outside of a browser. It is not a framework or a programming language, people often confused by that. 
+
+Node can be used for building high-scale applications that need to support multiple concurrent requests. Single-threaded non-blocking I/O makes it an excellent choice for both real-time and data streaming applications.
+
+----------
+Question 2
+Explain callback in Node.js.
+
+Answer:
+Node. js callbacks are a special type of function passed as an argument to another function. They're called when the function that contains the callback as an argument completes its execution, and allows the code in the callback to run in the meantime. Callbacks help us make asynchronous calls.
+
+----------
+Question 3
+What are the advantages of using promises instead of callbacks?
+
+Answer:
+Using promises instead of callbacks comes with several advantages, making your coding experience smoother and more human-friendly.
+
+Readability and Maintainability
+Promises provide a cleaner and more readable syntax compared to callbacks. The code structure becomes more linear and easier to follow, making it simpler for you and your team to understand and maintain.
+
+
+Elimination of Callback Hell
+With promises, you avoid the notorious "Callback Hell" or "Pyramid of Doom," where nested callbacks lead to code that's difficult to read and comprehend. Promises allow you to handle asynchronous operations more gracefully, enhancing the overall structure of your code.
+
+Error Handling
+Promises have built-in error handling, making it easier to catch and handle errors that might occur during asynchronous operations. This results in more robust and reliable code, as error management is an integral part of the promise structure.
+
+Chaining and Sequencing
+Promises facilitate the chaining of asynchronous operations, making it straightforward to sequence multiple tasks. This chaining capability enhances the clarity of your code, providing a more logical flow when dealing with dependent asynchronous tasks.
+	
+Simplicity in Design
+Promises simplify the design of your code. They abstract away some of the complexities associated with callbacks, allowing you to focus on the logic of your application rather than managing the flow of asynchronous operations.
+
+Single Execution Path
+Promises ensure a single execution path, making it easier to understand the order of operations. This predictability contributes to the reliability of your code and reduces the chances of unexpected behaviors.
+
+Global Error Handling
+Promises provide a centralized mechanism for error handling. You can attach a single .catch() block at the end of a promise chain to capture any errors that may have occurred at any point within the chain. This simplifies error tracking and debugging.
+
+----------
+Question 4
+What is NPM?
+
+Answer:
+NPM stands for Node Package Manager. It is a package manager for JavaScript programming language and primarily used for managing and sharing software packages and libraries in the Node.js ecosystem. NPM is used to install, share, and manage dependencies for Node.js projects.
+----------
+Question 5
+What are the modules in Node.js? Explain
+
+Answer:
+Node.js is a runtime environment that allows you to execute JavaScript code on the server side. It comes with a built-in module system to organize and reuse code. There are several core modules provided by Node.js, and you can also create your own modules.
+
+Here are some of the core modules in Node.js:
+HTTP Module:
+File System Module:
+Path Module:
+Events Module:
+OS Module:
+Util Module:
+
+

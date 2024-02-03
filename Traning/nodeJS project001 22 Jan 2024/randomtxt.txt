@@ -1,0 +1,60 @@
+001
+install npm init -y
+
+002
+add start in packageJson script
+
+003
+create index.js
+
+004
+create .env
+
+005
+write port and rootURL in .env
+
+006
+import app
+export app 
+
+007
+create src directory 
+create app.js
+
+008
+import express
+
+009
+path for common route
+    for this need to load router
+    then create router directory 
+    then create common.js in router directory
+
+010
+server listen
+    for listen get port variable
+
+011 
+(take this step early)
+import npm express
+
+012
+create path variable
+
+013
+create mongoose variable
+    for that import npm mongoose
+
+014
+parser for the posr request data
+parser for port request data json
+
+015
+app.use for static public 
+
+016
+enable template engine
+register partials 
+
+017
+Mongoose database connection 
