@@ -1,0 +1,123 @@
+{{> header}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container-sm">
+        <h2 class="display-2">All Tasks</h2>
+        {{#each alltask}}
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{this.task}}</h5>
+                <p class="card-text">
+                    {{this.description}}
+                </p>
+                
+                {{#if this.done}}
+                    <p class="link-success">Task is Complete</p>
+                    <a href="/taskIncomplete?taskId={{this._id}}" class="card-link">Mark as Incomplete</a>
+                {{else}}
+                <p class="link-danger">Task is Pending...</p>
+                    <a href="/taskComplete?taskId={{this._id}}" class="card-link">Mark as Complete</a>
+                {{/if}}
+                
+                <a href="/deleteTask?taskId={{this._id}}" class="card-link">Remove Task</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</body>
+
+</html>
+{{> footer}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{!-- {{> header}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container-sm">
+        <h2 class="display-2">All Tasks</h2>
+        {{#each alltask}}
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{this.task}}</h5>
+                <p class="card-text">
+                    {{this.description}}
+                </p>
+                <a href="/taskComplete?taskId={{this._id}}" class="card-link">Complete Task</a>
+                <a href="#" class="card-link">Remove Task</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</body>
+
+</html>
+{{> footer}} --}}

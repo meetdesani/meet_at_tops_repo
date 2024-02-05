@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bathAndBody</title>
+  <link rel="stylesheet" href="/header.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- head part strat -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a id="logo" class="navbar-brand" href="/">b&B</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          {{#if req.session.email}}
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/auth/logout">Log out</a>
+          </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/cart">Cart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/allProducts">All Products</a>
+          </li>
+          <div class="dropdown">
+            <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Something Specific
+            </button>
+            <ul class="dropdown-menu">
+              {{#each data}}
+              <li><a class="dropdown-item" href="/somethingSpecific?category={{this}}">{{this}}</a></li>
+              {{/each}}
+            </ul>
+          </div>
+          {{!-- Fragrance --}}
+          <div class="dropdown">
+            <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              FInd Your Favorite Fragrance
+            </button>
+            <ul class="dropdown-menu">
+              {{#each dataF}}
+              <li><a class="dropdown-item" href="/findYourFavFra?productName={{this}}">{{this}}</a></li>
+              {{/each}}
+            </ul>
+          </div>
+          {{!-- Gift --}}
+          <div class="dropdown">
+            <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Giftbox for Loved once, Find by Fragrance
+            </button>
+            <ul class="dropdown-menu">
+              {{#each dataG}}
+              <li><a class="dropdown-item"
+                  href="/productDetails?productName={{this.productName}}&productCategory={{this.productCategory}}">{{this.productName}}</a>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+          {{else if req.session.adminEmail}}
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/admin/dashboard">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/admin/logout">Logout Admin</a>
+            {{else}}
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/auth/login">Log In</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/auth/signup">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/admin/login">Admin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/allProducts">All Products</a>
+          </li>
+          <div class="dropdown">
+            <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Something Specific
+            </button>
+            <ul class="dropdown-menu">
+              {{#each data}}
+              <li><a class="dropdown-item" href="/somethingSpecific?category={{this}}">{{this}}</a></li>
+              {{/each}}
+            </ul>
+          </div>
+          {{!-- Fragrance --}}
+          <div class="dropdown">
+            <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              FInd Your Favorite Fragrance
+            </button>
+            <ul class="dropdown-menu">
+              {{#each dataF}}
+              <li><a class="dropdown-item" href="/findYourFavFra?productName={{this}}">{{this}}</a></li>
+              {{/each}}
+            </ul>
+          </div>
+          {{!-- Gift --}}
+          <div class="dropdown">
+            <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Giftbox for Loved once, Find by Fragrance
+            </button>
+            <ul class="dropdown-menu">
+              {{#each dataG}}
+              <li><a class="dropdown-item"
+                  href="/productDetails?productName={{this.productName}}&productCategory={{this.productCategory}}">{{this.productName}}</a>
+              </li>
+              {{/each}}
+            </ul>
+          </div>
+          {{/if}}
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  {{#if req.session.email}}
+  <div style="background-color: green; color:white; text-align:center">
+    <p>Logged In</p>
+  </div>
+  {{/if}}
+  {{#if message}}
+  <div class="alert alert-danger" role="alert">
+    {{ message }}
+  </div>
+  {{/if}}
+  {{#if messageG}}
+  <div class="alert alert-success" role="alert">
+    {{ messageG }}
+  </div>
+  {{/if}}
+  <!-- head part finish -->

@@ -1,0 +1,25 @@
+{{> header}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    <div class="container-sm">
+        <h2>
+            Confirm Otp
+        </h2>
+        <form action="/auth/forgototpconfirm" method="post">
+            <div class="form-group">
+                <label for="exampleInputEmail1">OTP</label>
+                <input name="otp" type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter OTP">
+            </div>
+            <button type="submit" class="btn btn-success">Confirm OTP</button>
+        </form>
+    </div>
+</body>
+</html>
+{{> footer}}

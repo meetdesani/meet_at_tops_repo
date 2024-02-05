@@ -1,0 +1,106 @@
+{{> header}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <br>
+    <div class="container-sm">
+        <h2>
+            <p>Product Details</p>
+        </h2>
+        <div class="container-sm">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- Content of the first div goes here -->
+                        {{#each dataSingle}}
+                        <img src="/multer/{{this.productImageName}}" class="img-fluid" alt="...">
+                        {{/each}}
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Content of the second div goes here -->
+                        {{#each dataSingle}}
+                        <div class="card" style="text-align: left;">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    Product Name:
+                                </h5>
+                                <h5 class="display-1">
+                                    {{this.productName}}
+                                </h5>
+                                <br>
+                                <p>
+                                    Product Category:
+                                    <br>
+                                    <strong>{{this.productCategory}}</strong>
+                                    <br>
+                                    <br>
+                                    Price:
+                                    <br>
+                                    <strong>INR: {{this.productPrice}}</strong>
+                                    <br>
+                                    <br>
+                                    Product Description:
+                                    <br>
+                                    <strong>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia ipsam natus
+                                        libero
+                                        temporibus dolore sunt excepturi adipisci culpa ab sed cupiditate, at
+                                        architecto, cum
+                                        quibusdam tenetur quod eaque omnis cumque dolorem. Enim aliquam voluptatibus
+                                        quas quae
+                                        mollitia, blanditiis illum necessitatibus id laborum doloremque vero nam numquam
+                                        earum,
+                                        deleniti a eaque neque exercitationem molestias doloribus sed fuga ipsa saepe!
+                                        Error
+                                        optio earum illo provident impedit modi velit perferendis, corporis a alias,
+                                        iure sit,
+                                        exercitationem distinctio praesentium tenetur minima? Quisquam impedit
+                                        recusandae
+                                        placeat molestiae. Corporis debitis, id labore omnis quasi sed accusamus
+                                        doloribus
+                                        doloremque ad magni accusantium dolore assumenda adipisci optio voluptatem!
+                                    </strong>
+                                    <br>
+                                    <br>
+                                </p>
+                                <br>
+                                <br><br>
+                                {{!-- <a href="#" class="btn btn-light">Buy Now</a>
+                                <a href="#" class="btn btn-light">Add to cart</a> --}}
+                                <button type="button" class="btn btn-link">Buy Now</button>
+                                 {{/each}}
+                                {{#if inCart}}
+                                    {{#each dataSingle}}
+                                        <button type="button" class="btn btn-link">
+                                            <a
+                                                href="/removeFromCart?productName={{this.productName}}&productCategory={{this.productCategory}}">Remove
+                                                from Cart</a>
+                                        </button>
+                                    {{/each}}
+                                {{else}}
+                                    {{#each dataSingle}}
+                                        <button type="button" class="btn btn-link">
+                                            <a
+                                                href="/addToCart?productName={{this.productName}}&productCategory={{this.productCategory}}">Add
+                                                to Cart</a>
+                                        </button>
+                                    {{/each}}
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+{{>footer}}

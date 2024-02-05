@@ -1,0 +1,25 @@
+{{> header}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    <div class="container-sm">
+        <h2>
+            Confirm OTP here
+        </h2>
+        <form action="/auth/otpConfirm?email={{email}}" method="post">
+            <div class="form-group">
+                <label for="exampleInputEmail1"></label>
+                <input name="otpuser" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First Name">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+{{> footer}}

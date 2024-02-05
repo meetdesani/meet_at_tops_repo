@@ -1,0 +1,52 @@
+{{> header}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <br>
+    <div class="container-sm">
+        <h2>
+            Checkout
+        </h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                {{#each product}}
+                <tr>
+                    <th>{{this.productName}}</th>
+                    <td>{{this.productCategory}}</td>
+                    <td>{{this.productPrice}}</td>
+                </tr>
+                {{/each}}
+                <tr>
+                    <th></th>
+                    <td><strong>Total Price:</strong> </td>
+                    <td>{{ totalPrice }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container mt-5">
+        <a href="/payment">
+            <button type="button" class="btn btn-success">
+                Payment
+            </button>
+        </a>
+    </div>
+</body>
+
+</html>
+{{> footer}}

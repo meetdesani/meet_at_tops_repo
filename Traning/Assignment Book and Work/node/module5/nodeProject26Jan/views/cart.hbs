@@ -1,0 +1,48 @@
+{{> header}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <br>
+    <div class="container">
+        <h2>Cart</h2>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            {{#each product}}
+            <div class="col">
+                <div class="card" style="width: 18rem; text-align: center;">
+                    <img src="/multer/{{this.productImageName}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.productName}}</h5>
+                        <p>
+                            {{this.productCategory}}
+                            <br>
+                            INR: {{this.productPrice}}
+                        </p>
+                        <a href="/productDetails?productName={{this.productName}}&productCategory={{this.productCategory}}"
+                            class="btn btn-light">Details</a>
+                        <br>
+                        {{!-- <a href="#" class="btn btn-light">Buy Now</a>
+                        <a href="#" class="btn btn-light">Add to cart</a> --}}
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    <div class="container mt-5">
+        <a href="/checkout">
+            <button type="button" class="btn btn-success">
+                Checkout
+            </button>
+        </a>
+    </div>
+</body>
+
+</html>
+{{>footer}}

@@ -1,0 +1,9 @@
+image in hbs is not working. 
+multer file is not getting uploaded.
+
+need-to-do
+edit product admin page
+lots of middlewhere
+filter products
+payment get away
+forgot password
