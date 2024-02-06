@@ -1,0 +1,21 @@
+Question 1
+What is Middleware in Express.js?
+
+Answer:
+Middleware functions are functions that have access to the request object ( req ), the response object ( res ), and the next function in the application's request-response cycle. The next function is a function in the Express router which, when invoked, executes the middleware succeeding the current middleware.
+
+Most common Middle where is  Express JSON () that is used to parse JSON data sent in the request body.
+----------
+
+Question 2
+What is json web tokens?
+
+Answer:
+A JSON Web Token (JWT) is a JSON object that securely transfers information between two parties. It's an open standard used to share security information between a client and a server.
+----------
+
+Question 3
+What is different between encryption and hashing?
+
+Answer:
+Encryption and hashing are both cryptographic techniques, Encryption involves the use of algorithms to convert plaintext into ciphertext, It is reversible. Hashing is a fixed-size hash value (digest) from input data of any size. Hashing is a one-way process, meaning you cannot reverse the hash value to obtain the original data.
